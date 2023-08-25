@@ -1,4 +1,4 @@
-enter anaconda prompt
+# enter anaconda prompt
 conda activate work
 1. run (cmd) $ python cut_frame.py the/path/of/video.mp4 the/folder/want/to/save
    (save path folder need to be open before run)
