@@ -1,0 +1,56 @@
+Combine multiple Jetson Nano VOC XML Data together
+This Python program combines multiple Jetson Nano VOC XML data into a single file. The combined file can be used for training object detection models.
+
+Prerequisites
+Python 3.6 or later
+argparse module
+os module
+shutil module
+
+
+Usage
+Prepare your data by creating separate directories for each dataset that you want to combine. Each directory should contain the following subdirectories:
+
+Annotations: This directory should contain XML files that describe the objects in your images.
+ImageSets/Main: This directory should contain TXT files that specify which images should be used for training, testing, validation, and so on. The TXT files should be named train.txt, test.txt, trainval.txt, and val.txt.
+JPEGImages: This directory should contain the images that correspond to the XML files in the Annotations directory.
+
+Run the program with the following command:
+
+livecodeserver
+
+python combine_jetson_nano_voc_xml_data_txt_files.py <path_to_directory_containing_subdirectories>
+```
+Replace `<path_to_directory_containing_subdirectories>` with the path to the directory that contains the subdirectories described in step 1.
+
+The program will create a new directory called combined_file in the same directory as the input directory. The combined_file directory will contain the combined XML and TXT files.
+
+Example
+Suppose you have the following directory structure:
+
+reasonml
+
+data
+├── dataset1
+│   ├── Annotations
+│   ├── ImageSets
+│   │   └── Main
+│   ├── JPEGImages
+│   └── README.txt
+├── dataset2
+│   ├── Annotations
+│   ├── ImageSets
+│   │   └── Main
+│   ├── JPEGImages
+│   └── README.txt
+└── combine_jetson_nano_voc_xml_data_txt_files.py
+
+To combine the two datasets, run the following command:
+
+haskell
+
+python combine_multiple_output.py data
+The program will create a new directory called combined_file in the data directory. The combined_file directory will contain the combined XML and TXT files for both datasets.
+
+License
+This program is licensed under the MIT License. See the LICENSE file for details.
